@@ -37,6 +37,9 @@ The scatter plots illustrate the relationship between sentiment scores and daily
 ## Tech Stack
 **Python** | pandas | akshare | Hugging Face Transformers | scipy.stats | matplotlib | seaborn
 
+
+
+
 ## 中文版
 
 **项目名称**：微博热搜情绪对港股科技股收益率的情感传染分析  
