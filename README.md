@@ -1,4 +1,5 @@
 # Weibo-Sentiment-Contagion-in-HK-Tech-Stocks
+### 中文版
 
 **项目名称**：微博热搜情绪对港股科技股收益率的情感传染分析  
 **研究对象**：腾讯（00700.HK）、阿里巴巴（09988.HK）、小米（01810.HK）
@@ -33,4 +34,41 @@
 
 ## 技术栈
 
+**Python** | pandas | akshare | Hugging Face Transformers | scipy.stats | matplotlib | seaborn
+
+### English Version
+
+**Project Title**: Emotional Contagion Analysis: The Impact of Weibo Hot Search Sentiment on the Returns of Hong Kong-Listed Tech Stocks
+**Stocks**: Tencent(00700.HK), Alibaba(09988.HK), Xiaomi(01810.HK)
+## Project Overview
+This project constructs a complete quantitative research pipeline from raw data collection to statistical analysis and visualization, exploring the **sentiment contagion effect** of Weibo hot search on the daily returns of three major Hong Kong tech stocks.
+
+## Methodology
+- Acquired adjusted daily price data for three stocks using `akshare` (May 27, 2024 – Jan 31, 2026)
+- Parsed over 1,000 Weibo hot search Markdown files to extract dates, keywords, and hot values
+- Applied the Chinese sentiment model **Erlangshen-Roberta-110M** to score keywords
+- Performed **EWMA (span=7)** smoothing on daily sentiment scores
+- Used `bfill` to align non-trading day sentiment with the next trading day
+- Conducted Pearson & Spearman correlation analysis and **0–5 day lag effect testing**
+
+## Visualization Results
+
+### 1. Best Lag Correlation: Sentiment Leading Effect
+![Lag Correlation Bar Chart](data/images/lag_correlation_bar.png)
+
+**Interpretation**:  
+This chart shows the leading effect of Weibo sentiment on stock returns. Alibaba exhibits a significant **negative correlation at Lag 0**, indicating a clear “good news already priced in” effect. Tencent and Xiaomi show moderate lagged effects.
+
+### 2. Sentiment Score vs Daily Return Scatter Plot
+![Sentiment vs Return Scatter](data/images/sentiment_vs_return_scatter.png)
+
+**Interpretation**:  
+The scatter plots illustrate the relationship between sentiment scores and daily returns. Alibaba demonstrates the strongest and statistically significant negative correlation.
+
+## Key Findings
+- Alibaba shows a **statistically significant negative correlation** (p < 0.05). Higher positive sentiment on Weibo tends to precede lower returns on the same day — acting as an effective **contrarian signal**.
+- Tencent and Xiaomi exhibit weaker correlations but noticeable lagged effects (1–5 trading days).
+- **Main Insight**: Hong Kong tech stocks exhibit heterogeneous responses to Weibo sentiment. The project validates the market’s sensitivity to accumulated off-trading-day sentiment and provides empirical support for contrarian strategies based on the “good news realization” effect.
+
+## Tech Stack
 **Python** | pandas | akshare | Hugging Face Transformers | scipy.stats | matplotlib | seaborn
