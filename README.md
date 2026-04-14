@@ -1,5 +1,5 @@
 # Weibo-Sentiment-Contagion-in-HK-Tech-Stocks
-### 中文版
+# 中文版
 
 **项目名称**：微博热搜情绪对港股科技股收益率的情感传染分析  
 **研究对象**：腾讯（00700.HK）、阿里巴巴（09988.HK）、小米（01810.HK）
@@ -36,7 +36,7 @@
 
 **Python** | pandas | akshare | Hugging Face Transformers | scipy.stats | matplotlib | seaborn
 
-### English Version
+# English Version
 
 **Project Title**: Emotional Contagion Analysis: The Impact of Weibo Hot Search Sentiment on the Returns of Hong Kong-Listed Tech Stocks
 **Stocks**: Tencent(00700.HK), Alibaba(09988.HK), Xiaomi(01810.HK)
