@@ -39,9 +39,9 @@
 
 ### 3. 股价与三套情绪时间序列对比图
 每只股票均生成双轴时间序列图，同时展示收盘价与正面、负面、净情绪（EWMA平滑后）的走势：
-![腾讯股价与情绪对比](data/images/tencent_price_sentiment_pos_neg_net.png)
-![阿里巴巴股价与情绪对比](data/images/alibaba_price_sentiment_pos_neg_net.png)
-![小米股价与情绪对比](data/images/xiaomi_price_sentiment_pos_neg_net.png)
+- [腾讯](data/images/tencent_price_sentiment_pos_neg_net.png)
+- [阿里巴巴](data/images/alibaba_price_sentiment_pos_neg_net.png)
+- [小米](data/images/xiaomi_price_sentiment_pos_neg_net.png)
 
 ## 研究结论
 - **整体结论**：样本期内，微博热搜的正面、负面及净情绪对三只港股日收益率的**线性预测能力整体有限**，同期相关性均不显著。但在滞后效应检验中，部分股票在特定滞后期内呈现统计显著的弱相关。
